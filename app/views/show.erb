@@ -1,4 +1,4 @@
 <h1><%= @blog_post.name %></h1>
 <p><%= @blog_post.content %></p>
-<form action="/posts/<%= @blog_post.id %>/delete" method="delete"><input type="submit" name="delete" value="delete"></form>
+<form action="/posts/<%= @blog_post.id %>/delete" method="post"><input type="submit" name="delete" value="delete"></form>
 
