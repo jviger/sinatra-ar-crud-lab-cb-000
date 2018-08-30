@@ -39,15 +39,15 @@ class ApplicationController < Sinatra::Base
     erb:edit
   end
   
-  puts '/posts/:id' do
+  patch '/posts/:id' do
     @blog_post = Post.find_by_id(params[:id])
     @blog_post.name = params[:name]
     @blog_post.content = params[:content]
-    @blot_post.save
+    @blog_post.save
     erb :show
   end
   
-  post '/posts/:id/delete' do
+  delet '/posts/:id/delete' do
     @blog_post = Post.find_by_id(params[:id])
     @blog_post.delete
     erb :deleted
